@@ -1,0 +1,83 @@
+#experience{
+    background-color: #eee9e9;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.experience-flex{
+    display: flex;
+    margin-top: 100px;
+    position: relative;
+    height: auto;
+}
+
+
+.experience-div1{
+    flex: 30%;
+    padding: 10px;
+    text-align: right;
+}
+
+
+.vl {
+    border-left: 2px solid rgba(0, 0, 0, 0.921);
+    height: 100%;
+    position: absolute;
+    left: 30%;
+ 
+  }
+
+  .experience-ul1{
+    flex: 70%;
+    padding-left: 25px;
+    padding-top: 10px;
+    text-align: left;
+
+    
+}
+
+.experience-div2{
+    flex: 30%;
+    padding: 10px;
+    text-align: left;
+}
+
+
+.vl2 {
+    border-left: 2px solid rgba(0, 0, 0, 0.921);
+    height: 100%;
+    position: absolute;
+    left: 70%;
+ 
+  }
+
+  .experience-ul2{
+    flex: 70%;
+    padding-left: 25px;
+    padding-top: 10px;
+    text-align: left;
+
+    
+}
+
+@media screen and (max-width: 768px) {
+    .experience-flex {
+        flex-direction: column;
+    }
+
+    .vl,
+    .vl2 {
+        display: none;
+    }
+
+    .experience-div1,
+    .experience-div2,
+    .experience-ul1,
+    .experience-ul2 {
+        flex: 100%;
+        text-align: center;
+    }
+}
+

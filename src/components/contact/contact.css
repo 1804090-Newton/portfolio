@@ -1,0 +1,97 @@
+.contact-style{
+    background-color: #eee9e9;
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.contact-style>div:first-child{
+    margin-bottom: 50px;
+}
+.contact-style>p:first-child{
+    margin-bottom: 50px;
+}
+
+.contact-style>div>img,
+.contact-style>div>a>img{
+    width: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+
+#contactForm {
+    flex-direction: column;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: none; 
+
+  
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#contactForm h2 {
+    margin-bottom: 20px;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="tel"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#contactForm textarea {
+    resize: vertical;
+}
+
+
+
+
+.write-messege-button-style {
+  
+    border: 2px solid rgb(188, 182, 182);
+    
+    border-radius: 5px;
+    height: 25px;
+    text-align: center;
+    padding: 3px 5px;
+    margin: 5px;
+   
+}
+
+.write-messege-button-style:hover {
+    background: #cecece;
+    border: 1px solid rgb(193, 186, 186);
+    
+    border-radius: 5px;
+    height: 25px;
+    text-align: center;
+    padding: 3px 5px;
+    margin: 5px;
+   
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact-style {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
