@@ -16,6 +16,8 @@ a, li, button {
 }
 
 header {
+  margin-left:30px ;
+  margin-right: 30px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

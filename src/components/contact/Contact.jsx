@@ -1,19 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './contact.css';
 
-export default function Contact() {
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-    function ContactForm() {
-        let form1 = document.getElementById("contactForm"); 
-        let writeMessage = document.getElementById("contact-write-message");
-      
-        if (form1.style.display === "none" || form1.style.display === "") {
-          form1.style.display = "flex";
-          writeMessage.textContent = "Submit";
-        } else {
-          form1.style.display = "none";
-          writeMessage.textContent = "Write Message";
-        }
+export default function Contact() {
+    const [showForm, setShowForm] = useState(false);
+
+    function toggleFormVisibility() {
+        setShowForm(prevState => !prevState);
     }
 
     return (
@@ -29,29 +24,35 @@ export default function Contact() {
             </p>
 
             <div style={{ marginTop: '80px', marginBottom: '70px' }}>
-                <form id="contactForm"> 
-                    <label htmlFor="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" />
-                    <br />
-                    <label htmlFor="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" />
-                    <br />
-                    <label htmlFor="contactNumber">Contact Number:</label>
-                    <input type="tel" id="contactNumber" name="contactNumber" />
-                    <br />
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" />
-                    <br />
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" cols="50" />
-                    <br />
-                </form>
-        
-                <span onClick={ContactForm} className="write-messege-button-style">
-                    <a href="#contact" id="contact-write-message">Write Message</a>
+                {showForm && (
+                    <form id='contactForm'> 
+                        <label htmlFor="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" />
+                        <br />
+                        <label htmlFor="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" />
+                        <br />
+                        <label htmlFor="contactNumber">Contact Number:</label>
+                        <input type="tel" id="contactNumber" name="contactNumber" />
+                        <br />
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" />
+                        <br />
+                        <label htmlFor="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" cols="50" />
+                        <br />
+                    </form>
+                )}
+
+                <span onClick={toggleFormVisibility} className="write-messege-button-style">
+                    {showForm ? "Submit" :   <a href="#contact" id="contact-write-message">Write Message</a> }
+                    
                 </span>
             </div>
-            
+            <div  className="online-platform">
+            <FontAwesomeIcon icon={faGithub} /> <tap/>
+            <FontAwesomeIcon icon={faLinkedin} />
+             </div>
             <p>Newton</p>
         </div>
     );

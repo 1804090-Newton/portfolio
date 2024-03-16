@@ -21,17 +21,16 @@ export default function FeatureProject() {
             sed placeat minima earum temporibus magni.
           </p>
           <hr />
-          <div>
-            <span>Html</span>
-            <span>CSS</span>
-            <span>JS</span>
+          <div >
+          <p>HTML  CSS  JSS</p>
           </div>
           <div>
-            <img width="25px" src={githubIcon} alt="Github" />
+            <img width="25px" style={{ marginRight: "10px" }} src={githubIcon} alt="Github" />
             <a href="#">
               <img
                 width="25px"
                 height="25px"
+                style={{ marginLeft: "10px" }}
                 src={externalIcon}
                 alt="External"
               />
@@ -52,14 +51,13 @@ export default function FeatureProject() {
           </p>
           <hr />
           <div>
-            <span>Html</span>
-            <span>CSS</span>
-            <span>JS</span>
+          <p>HTML  CSS  JSS</p>
           </div>
           <div>
-            <img width="25px" src={githubIcon} alt="Github" />
+            <img width="25px"   style={{ marginRight: "10px" }} src={githubIcon} alt="Github" />
             <a href="#">
               <img
+              style={{ marginLeft: "10px" }}
                 width="25px"
                 height="25px"
                 src={externalIcon}
