@@ -6,7 +6,7 @@ const Quotes = () => {
     const { data: quotes, loading } = useFetch('https://type.fit/api/quotes');
     const [quote, setQuote] = useState({
         text: "Life is beautiful",
-        author: "sourov vai",
+        author: "sourav vai",
     });
 
     const random = () => {
